@@ -4,7 +4,7 @@
 from setuptools import setup
 
 
-package_name = 'PilotageVanne'
+package_name = 'pilotageVanne'
 filename = package_name + '.py'
 
 
@@ -35,7 +35,7 @@ setup(
     py_modules=[package_name],
     entry_points={
         'console_scripts': [
-            'PilotageVanne = PilotageVanne:main'
+            'pilotageVanne = pilotageVanne:main'
         ]
     },
 )
