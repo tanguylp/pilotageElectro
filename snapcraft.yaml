@@ -14,7 +14,7 @@ plugs:
   config-pilotagevanne:
     interface: personal-files
     read:
-    - /home/evesa/Documents/xbeeProjectCalendrier/
+    - /home/evesa/Documents/xbeeProjectCalendrier/ProjetArrosage.db
    
 apps:
   pilotagevanne:
