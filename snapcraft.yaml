@@ -13,7 +13,7 @@ confinement: devmode # use 'strict' once you have the right plugs and slots
 apps:
   pilotagevanne:
     command: bin/pilotageVanne
-    plugs: ["serial-port","personal-files"]
+    plugs: ["serial-port", "personal-files"]
 
 parts:
   pilotagevanne:
@@ -26,4 +26,4 @@ parts:
  plugs:
   personal-files:
     read:
-    - /home/evesa/Documents/xbeeProjectCalendrier/ProjetArrosage.db
+    - /home/evesa/Documents/xbeeProjectCalendrier
