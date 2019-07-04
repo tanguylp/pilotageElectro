@@ -10,10 +10,19 @@ description: |
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: devmode # use 'strict' once you have the right plugs and slots
 
+plugs:
+  config-pilotagevanne:
+    interface: system-files
+    read:
+    - /home/evesa/Documents/xbeeProjectCalendrier
+
 apps:
   pilotagevanne:
     command: bin/pilotageVanne
-    plugs: ["serial-port", "personal-files"]
+    #plugs: ["serial-port", "personal-files"]
+    plugs:
+    - config-pilotagevanne
+    - serial-port
 
 parts:
   pilotagevanne:
@@ -23,7 +32,4 @@ parts:
     source: https://github.com/tanguylp/pilotageElectro.git
     requirements: requirements.txt
     
- plugs:
-  personal-files:
-    read:
-    - /home/evesa/Documents/xbeeProjectCalendrier
+
