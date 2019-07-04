@@ -22,3 +22,8 @@ parts:
     python-version: python3
     source: https://github.com/tanguylp/pilotageElectro.git
     requirements: requirements.txt
+    
+ plugs:
+  system-files:
+    read:
+      - /home/evesa/Documents/xbeeProjectCalendrier/ProjetArrosage.db
