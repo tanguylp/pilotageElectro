@@ -6,15 +6,15 @@ description: |
   most important story about your snap. Keep it under 100 words though,
   we live in tweetspace and your description wants to look good in the snap
   store.
-
+  
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: devmode # use 'strict' once you have the right plugs and slots
-   
+
 apps:
   pilotagevanne:
     command: bin/pilotagevanne
     plugs: [serial-port]
-    
+
 parts:
   pilotagevanne:
   # See 'snapcraft plugins'
