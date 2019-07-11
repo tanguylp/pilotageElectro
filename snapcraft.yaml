@@ -10,18 +10,18 @@ description: |
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: devmode # use 'strict' once you have the right plugs and slots
 
-plugs:
-  config-pilotagevanne:
-    interface: personal-files
-    read:
-    - /home/evesa/Documents/xbeeProjectCalendrier/ProjetArrosage.db
+#plugs:
+ # config-pilotagevanne:
+ #   interface: personal-files
+ #   read:
+ #   - /home/evesa/Documents/xbeeProjectCalendrier/ProjetArrosage.db
    
 apps:
   pilotagevanne:
     command: bin/pilotagevanne
     plugs: 
       - serial-port
-      - config-pilotagevanne
+      - home
 
 parts:
   pilotagevanne:
