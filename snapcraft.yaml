@@ -14,8 +14,8 @@ apps:
   pilotagevanne:
     command: bin/pilotageVanne
     plugs: 
-    - serial-port
-    - home
+     - serial-port
+     - home
 
 parts:
   pilotagevanne:
