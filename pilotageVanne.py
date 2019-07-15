@@ -19,7 +19,7 @@ def main():
 
 	date_jour = datetime.now().strftime('%d/%m/%Y %H:%M:%S')
 	duration = 40
-	conn = sqlite3.connect('ProjetArrosage.db')
+	conn = sqlite3.connect('/home/ProjetArrosage.db')
 	c = conn.cursor()
 	db = conn.cursor()
 	a = list()
