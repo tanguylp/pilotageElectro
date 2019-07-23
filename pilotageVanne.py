@@ -85,22 +85,30 @@ def main():
 				print(dataDuree)
 				for id_vanne in dataVanne:
 					f.append(id_vanne[0])
+					print("ff",f)
 					vanne_id = f[0]
 				for duree in dataDuree:
 					g.append(duree[0])
 					duree = g[0]
 					duree = datetime.strptime(duree,'%M')
 					dureeMin = timedelta(minutes=duree.minute)
-					print(vanne_id)
-					print(duree)
+				print(vanne_id)
 				# comparaison id_vanne de la table ARROSAGE et id_vanne MACID recuperation de l'adresse mac
 				c.execute("SELECT mac_addr FROM MACID where id_vanne like ?", ('%' + str(vanne_id) + '%', )) 
 				m = c.fetchall()
+				print("m", m)
 				for mm in m:
+					print("e",e)
 					e.append(mm[0])
+					print("ee",e)
 				xbee_adr = e[0] # récuperation de l'adresse mac dans une variable
 				print(xbee_adr)
 				time.sleep(1)
+
+				del f[0]
+				del g[0]
+				e.clear()
+				del e[:]
 
 				stop = False
 				th = None
@@ -139,7 +147,6 @@ def main():
 								 if retries == 0:
 								 	raise ex
 					time.sleep(3)
-
 				finally:
 					stop = True
 					if th is not None and th.is_alive():
